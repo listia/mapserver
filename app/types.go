@@ -61,6 +61,7 @@ type MapObjectConfig struct {
 	Minecart           bool `json:"minecart"`
 	Locator            bool `json:"locator"`
 	Signs              bool `json:"signs"`
+	XYGrid             bool `json:"xygrid"`
 }
 
 type WebApiConfig struct {

@@ -22,6 +22,7 @@ import BorderOverlay from './overlays/BorderOverlay.js';
 import TrainOverlay from './overlays/TrainOverlay.js';
 import TrainsignalOverlay from './overlays/TrainsignalOverlay.js';
 import SignOverlay from './overlays/SignOverlay.js';
+import XYOverlay from './overlays/XYOverlay.js';
 
 export default function(cfg, map, overlays, wsChannel){
 
@@ -40,6 +41,13 @@ export default function(cfg, map, overlays, wsChannel){
     overlays.POI = new PoiOverlay(wsChannel);
     if (isDefault("mapserver_poi")) {
       map.addLayer(overlays.POI);
+    }
+  }
+
+  if (cfg.mapobjects.xygrid) {
+    overlays["X,Y Project Grid"] = new XYOverlay();
+    if (isDefault("xygrid")) {
+      map.addLayer(overlays["X,Y Project Grid"]);
     }
   }
 

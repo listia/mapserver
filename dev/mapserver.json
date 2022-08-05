@@ -59,7 +59,8 @@
 		"trainsignal": true,
 		"minecart": false,
 		"locator": false,
-		"signs": true
+		"signs": true,
+		"xygrid": true
 	},
 	"mapblockaccessor": {
 		"expiretime": "15s",
